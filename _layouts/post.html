@@ -1,0 +1,17 @@
+
+{% include header.html %}
+{% include nav.html %}
+
+<section id="posts">
+    <h4>Post</h4>
+    {% for post in site.posts %}
+        <li class="listpost"><a href="{{ post.url }}">{{post.title}}</a>
+        <p id="date">
+        {{post.date}} <br>
+        </p></li>
+    {% endfor %}
+    <hr>
+</section>
+
+
+{{ content }}

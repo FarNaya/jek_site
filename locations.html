@@ -1,0 +1,38 @@
+---
+layout: "page"
+title: Locations
+permalink: /locations.html/
+---
+{% include header.html %}
+{% include nav.html %}
+
+<style>
+  h4{
+    color: grey;
+  }
+  p {
+    font-size: 10px;
+  }
+</style>
+
+  <main>
+    <section>
+  <h3>Best locations in Calgary</h3>
+  <h5>
+    Delicious real mexican food in town!
+  </h5>
+  </section>
+  
+  <section>
+  <ul>
+{% for restaurant in site.data.restaurant %}
+<li>
+  <h4>{{ restaurant.Name }}</h4><p>{{ restaurant.Adress }}</p>  <br>
+  </li>
+{% endfor %}
+</ul>
+</section>
+
+</main>
+
+
